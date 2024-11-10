@@ -1,0 +1,13 @@
+.heading-container {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  
+  .heading-title {
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    border-bottom: 4px solid currentColor; /* replicates 'border-b-4' */
+    font-size: 1.25rem; /* adjust as needed for text size */
+  }
+
+  

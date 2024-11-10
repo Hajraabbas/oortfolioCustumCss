@@ -1,0 +1,99 @@
+/* Container for the Navbar */
+.navbar-container {
+  padding-top: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 1200px) {
+  .navbar-container {
+    max-width: 1200px;
+  }
+}
+
+/* Main Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+/* Links for Desktop */
+.navbar-links {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+/* Hamburger Icon (Hidden on Desktop) */
+.navbar-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Toggleable Menu Styles for Mobile */
+.navbar-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 15px;
+  background-color: white;
+  padding: 1rem;
+  gap: 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.navbar-menu li a {
+  font-size: 1.25rem;
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  /* Hide main navbar links on smaller screens */
+  .navbar-links {
+    display: none;
+  }
+
+  /* Show the hamburger icon */
+  .navbar-menu-icon {
+    display: block;
+  }
+
+  /* Show the mobile menu when open */
+  .navbar-menu.open {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Show main navbar links on larger screens */
+  .navbar-links {
+    display: flex;
+  }
+
+  /* Hide the hamburger icon on larger screens */
+  .navbar-menu-icon {
+    display: none;
+  }
+}
